@@ -1,0 +1,48 @@
+<body>
+    <div class = "row">
+        <h2> Cricket Stats</h2>
+    </div>
+    
+    <table class = "table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th> ID</th>
+                <th> Name</th>
+                <th> Surname</th>
+                <th> 50 </th>
+                <th> 100 </th>
+                <th> Wickets </th>
+                <th> Strike Rate </th>
+                <th> Eco </th>
+               
+                <th> Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let cricket of crickets" >
+                <td style="font-weight: bold;"> {{cricket.id}} </td>
+                <td style="color: blue;"> {{ cricket.cname}} </td>
+                <td style="color: orangered"> {{ cricket.csurname}} </td>
+                <td style="text-align: center;">{{cricket.chc}}</td>
+                <td style="text-align: center;">{{cricket.cc}}</td>
+                <td style="text-align: center;">{{cricket.cw}}</td>
+                <td style="text-align: center;">{{cricket.csr}}</td>
+                <td style="text-align: center;">{{cricket.ceco}}</td>
+                
+                
+              
+                <td>
+                    <button (click) = "updateCricket(cricket.id)" class = "btn btn-secondary"> Update</button>
+                    <button (click) = "deleteCricket(cricket.id)" class = "btn btn-dark" style="margin-left: 10px"> Delete</button>
+                    <button (click) = "cricketDetails(cricket.id)" class = "btn btn-secondary" style="margin-left: 10px"> View</button>
+                    <button (click) = "cricketInfo(cricket.id)" class = "btn btn-secondary" style="margin-left: 10px"> Info</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    <br>
+    <a [routerLink]="['/home']" class="btn btn-primary">Back to Home</a>
+</body> 
+

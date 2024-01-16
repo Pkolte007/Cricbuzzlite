@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 20px;
+    background-color: orangered;
+    text-align: center;
+    color: green;
+}
+/* styles.css */
+
+/* Navbar Styles */
+/* .navbar {
+    background-color: red; 
+   
+    width: 100%;
+    height: 30%;
+  } */
+  
+  /* .navbar-nav {
+    display: flex;
+  } */
+  
+  /* .nav-item {
+    margin-right: 10px; 
+  } */
+  
+  /* .nav-link {
+    color: #fff; 
+  } 
+  
+  /* .nav-link:hover {
+    text-decoration: underline;
+  } */
+  
+  /* Marquee Styles */
+  marquee {
+    font-size: 3em;
+    color: #007bff; /* Match the navbar color for consistency */
+  }
+  
+  /* Container Styles */
+  .container {
+    margin-top: 20px; /* Adjust top margin for the container */
+  }
+  
+  /* Footer Styles */
+    /* body {
+    background-color: rgb(63, 51, 53);  Replace with the color of your choice 
+     margin: 0; Remove default margin 
+      padding: 0;Remove default padding 
+  
+   
+   
+   } */
+   body {
+    background-image: url(https://t4.ftcdn.net/jpg/02/87/54/29/240_F_287542942_x8FeyvoeXMBoI2gK3JwxBxS9laMxPmOC.jpg); /* Add the background image URL here */
+    background-size: cover;/* Adjust the background image size to cover the whole body */
+    /*background-position: center;  /*Adjust the background image position to center*/ 
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    margin: 0; /* Remove default margin */
+    padding: 0;/* Remove default*/
+  }
+
+
+  

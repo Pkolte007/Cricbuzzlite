@@ -1,0 +1,128 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Cricket Matches</title>
+</head>
+<body>
+
+<div id="upcomingMatches">
+    <h2>Upcoming Cricket Matches</h2>
+    <ul id="matchesList"></ul>
+</div>
+
+<script>
+   
+    fetch('https://www.cricbuzz.com/cricket-series/6694/new-zealand-tour-of-bangladesh-2023/matches')
+        .then(response => response.json())
+        .then(data => {
+            const matchesList = document.getElementById('matchesList');
+
+           
+            data.forEach(match => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <strong>Match:</strong> ${match.team1} vs ${match.team2}
+                    <br>
+                    <strong>Date:</strong> ${match.date}
+                    <br>
+                    <strong>Time:</strong> ${match.time}
+                `;
+                matchesList.appendChild(listItem);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Cricket Matches</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+         td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            color: white;
+        }
+
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            color: black;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div id="upcomingMatches">
+    <h2>Upcoming Cricket Matches</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Match</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Format</th>
+                <th>Booking</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>India vs Australia
+                    <img src="https://e0.pxfuel.com/wallpapers/542/1014/desktop-wallpaper-india-national-cricket-team-logo-page-1-indian-cricket-team-logo.jpg" alt="Icon" width="25" height="25"> vs <img src="https://i.pinimg.com/originals/f2/70/28/f27028860c30045bfc21b5720cee3afc.png" alt="Icon" width="25" height="25">
+                </td>
+                <td>November 28, 2023</td>
+                <td>19:00 IST</td>
+                <td>T20</td>
+                <td><button class="btn btn-primary" (click)="selection()" >Buy Tickets</button></td> 
+            </tr>
+
+            <tr>
+                <td>India vs Australia
+                    <img src="https://e0.pxfuel.com/wallpapers/542/1014/desktop-wallpaper-india-national-cricket-team-logo-page-1-indian-cricket-team-logo.jpg" alt="Icon" width="25" height="25"> vs <img src="https://i.pinimg.com/originals/f2/70/28/f27028860c30045bfc21b5720cee3afc.png" alt="Icon" width="25" height="25">
+                </td>
+                <td>December 1, 2023</td>
+                <td>19:00 IST</td>
+                <td>T20</td>
+                <td><button class="btn btn-primary" (click)="selection()" >Buy Tickets</button></td> 
+            </tr>
+
+            <tr>
+                <td>India vs Australia
+                    <img src="https://e0.pxfuel.com/wallpapers/542/1014/desktop-wallpaper-india-national-cricket-team-logo-page-1-indian-cricket-team-logo.jpg" alt="Icon" width="25" height="25"> vs <img src="https://i.pinimg.com/originals/f2/70/28/f27028860c30045bfc21b5720cee3afc.png" alt="Icon" width="25" height="25">
+                </td>
+                <td>December 4, 2023</td>
+                <td>19:00 IST</td>
+                <td>T20</td>
+                <td><button class="btn btn-primary" (click)="selection()" >Buy Tickets</button></td> 
+            </tr>
+         
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+
+
+
+

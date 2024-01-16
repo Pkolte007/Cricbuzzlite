@@ -1,0 +1,8 @@
+body {
+    background-image: url(https://t4.ftcdn.net/jpg/02/87/54/29/240_F_287542942_x8FeyvoeXMBoI2gK3JwxBxS9laMxPmOC.jpg); /* Add the background image URL here */
+    background-size: cover;/* Adjust the background image size to cover the whole body */
+    background-position: center;  /*Adjust the background image position to center*/ 
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    margin: 0; /* Remove default margin */
+    padding: 0;/* Remove default*/
+  }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Ticket Booking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .ticket-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .ticket {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+        }
+
+        .ticket img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .buy-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        google-pay-button {
+    width: 5; /* Set the desired width */
+  }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cricket Ticket Booking</h1>
+    </header>
+
+    <section>
+        <h2>Available Tickets</h2>
+
+        <div class="ticket-container">
+            <div class="ticket">
+                <img src="https://i1.wp.com/images.news18.com/ibnlive/uploads/2023/10/copy-of-sports-2023-10-14t101103.272-2023-10-51139676a4a60c5a9e215e0c4d73d9fd.jpg?strip=all" alt="Ticket 1">
+                <h3>Match Day Ticket</h3>
+                <p>Watch the live cricket match from the stands.</p>
+                <p>Price: Rs 5000</p>
+                <button class="btn btn-primary" (click)="payment()" >Payment</button>
+            </div>
+
+            <div class="ticket">
+                <img src="https://i1.wp.com/images.news18.com/ibnlive/uploads/2023/10/copy-of-sports-2023-10-14t101103.272-2023-10-51139676a4a60c5a9e215e0c4d73d9fd.jpg?strip=all" alt="Ticket 2">
+                <h3>VIP Box</h3>
+                <p>Enjoy the match in a VIP box with premium amenities.</p>
+                <p>Price: Rs 8000</p>
+                <google-pay-button
+                environment="TEST"
+                buttonType="buy"
+                buttonColor="black"
+                [paymentRequest]="paymentRequest"
+                (loadpaymentdata)="onLoadPaymentData($event)"
+                (error)="onError($event)"
+                [paymentAuthorizedCallback]="onPaymentDataAuthorized"
+                
+              >
+              </google-pay-button>
+                
+            </div>
+
+        
+
+          
+        </div>
+    </section>
+   
+   
+
+    <!-- <footer>
+        <p>&copy; 2023 Cricket Ticket Booking. All rights reserved.</p>
+    </footer> -->
+    <br>
+    <a [routerLink]="['/stand-selection']" class="btn btn-primary">Stand Selection</a>
+</body>
+
+</html>

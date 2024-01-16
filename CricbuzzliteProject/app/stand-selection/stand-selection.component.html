@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Seat Selection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url(https://media.istockphoto.com/id/1182189509/photo/inside-the-mcg-with-a-crowd-of-90-000.jpg?s=612x612&w=0&k=20&c=4W7yCEys6sFrm57Uc7q475cd9Worr2PUkGS_qXbqGm0=); /* Add the background image URL here */
+    background-size: cover;/* Adjust the background image size to cover the whole body */
+    background-position: center;  /*Adjust the background image position to center*/ 
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    margin: 0; /* Remove default margin */
+    padding: 0;/* Remove default*/
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .seat-selection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        select {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cricket Match Seat Selection</h1>
+    </header>
+
+    <section>
+        <div class="seat-selection">
+            <label for="stand">Select Stand:</label>
+            <select id="stand">
+                <option value="east">East Stand</option>
+                <option value="west">West Stand</option>
+                <option value="north">North Stand</option>
+                <option value="south">South Stand</option>
+            </select>
+
+            <label for="row">Select Row:</label>
+            <select id="row">
+                <option value="a">Row A</option>
+                <option value="b">Row B</option>
+                <option value="c">Row C</option>
+                <option value="d">Row D</option>
+                <!-- Add more rows as needed -->
+            </select>
+
+            <button class="submit-button" (click)="submitSelection()">Submit Selection</button>
+        </div>
+    </section>
+
+   
+    <br>
+    <a [routerLink]="['/home']" class="btn btn-primary">Back to Home</a>
+   
+</body>
+
+</html>
+

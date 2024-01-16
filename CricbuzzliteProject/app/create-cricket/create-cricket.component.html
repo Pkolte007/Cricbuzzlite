@@ -1,0 +1,71 @@
+<body>
+
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Create Department </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> ID</label>
+                        <input type="number" class="form-control" id="ID" [(ngModel)]="cricket.id"
+                            name="ID">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Name</label>
+                        <input type="text" class="form-control" id="Name" [(ngModel)]="cricket.cname"
+                            name="Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Surname</label>
+                        <input type="text" class="form-control" id="Surname" [(ngModel)]="cricket.csurname"
+                            name="Surname">
+                    </div>
+
+                    <div class="form-group">
+                        <label> 50</label>
+                        <input type="text" class="form-control" id="50" [(ngModel)]="cricket.chc"
+                            name="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label> 100</label>
+                        <input type="text" class="form-control" id="100" [(ngModel)]="cricket.cc"
+                            name="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Wickets</label>
+                        <input type="text" class="form-control" id="wickets" [(ngModel)]="cricket.cw"
+                            name="wicktes">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Strike Rate</label>
+                        <input type="text" class="form-control" id="strikerate" [(ngModel)]="cricket.csr"
+                            name="strikerate">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Eco</label>
+                        <input type="text" class="form-control" id="eco" [(ngModel)]="cricket.ceco"
+                            name="eco">
+                    </div>
+
+
+
+               
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
